@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="pl-PL">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <link href="style.css" rel="stylesheet"/>
+        <header id="pageHeader">
+            <p style="font-family: 'Courier New'">
+                <i><font size="4">WYDZIAŁ INFORMATYKI, ELEKTRONIKI I TELEKOMUNIKACJI</font></i>
+            </p>
+            <p style="font-family:'Arial Black'">
+                <b><font size="5"> STRONA GŁÓWNA SYSTEMU POMIARU HAŁASU NA KAMPUSIE AGH</font></b>
+            </p>
+        </header>
+        <article id="Article1">
+            <canvas id="soundDev1"></canvas>
+        </article>
+        <article id="Article2">
+            <canvas id="soundmaxDev1"></canvas>
+        </article>
+        <article id="Article3">
+            <canvas id="batteryLifeDev1"></canvas>
+        </article>
+        <nav id="mainNav">
+            <section id="section_header">
+                <h1>
+
+                </h1>
+                <div class="dropdown">
+                    <button class="dropbtn">Urządzenia</button>
+                    <div class="dropdown-content">
+                        <a onclick="changeDevice('agh-noise-measurement-unit-1')" href="#">Device #1</a>
+                        <a onclick="changeDevice('agh-noise-measurement-unit-2')" href="#">Device #2</a>
+                    </div>
+                </div>
+                <p id ="Buttons">
+                    <button class="button" onclick="getData1h()">1h</button>
+                    <button class="button" onclick="getData3h()">3h</button>
+                    <button class="button" onclick="getData6h()">6h</button>
+                </p>
+                <p id="dev_status">
+                    Loading...
+                </p>
+            </section>
+        </nav>
+        <div id="emptyLine"></div>
+        <div id="lineAGH">
+            <div class="lineR"></div>
+            <div class="lineB"></div>
+            <div class="lineG"></div>
+        </div>
+        <div id="logoAGH">
+            <img src="AGHlogo2.jpg" class="logoAGH">
+        </div>
+        <footer id="pageFooter">
+            Wykonane przez Mateusza Kruźlaka
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
